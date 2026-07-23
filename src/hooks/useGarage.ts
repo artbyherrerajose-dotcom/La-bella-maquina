@@ -44,9 +44,6 @@ export function useGarage() {
   }, [userId]);
 
   useEffect(() => {
-    // `load` is an async data fetch (not a synchronous setState-in-render loop);
-    // its setState calls only happen after the awaited Supabase requests resolve.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     load();
   }, [load]);
 
